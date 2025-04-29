@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowDown, FaFileDownload } from 'react-icons/fa';
 
 export default function Hero() {
   const scrollToNextSection = () => {
@@ -52,7 +52,7 @@ export default function Hero() {
         >
           <a 
             href="#projects" 
-            className="glass-effect px-8 py-3 text-metallic-dark dark:text-metallic-light font-medium transition-all duration-300 hover:shadow-lg"
+            className="glass-effect px-8 py-3 text-metallic-dark dark:text-metallic-light font-medium transition-all duration-300 hover:shadow-lg rounded-lg"
           >
             View Projects
           </a>
@@ -61,6 +61,14 @@ export default function Hero() {
             className="border border-metallic-grey/30 hover:border-metallic-grey/60 dark:border-metallic-light/30 dark:hover:border-metallic-light/60 px-8 py-3 rounded-lg text-metallic-grey dark:text-metallic-light font-medium transition-all duration-300 hover:shadow-lg"
           >
             Get in Touch
+          </a>
+          <a 
+            href="/assets/Nihal_Mehta_Resume.pdf" 
+            download
+            className="bg-luxury-gold hover:bg-luxury-gold/90 px-8 py-3 rounded-lg text-jet-black font-medium transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+          >
+            <FaFileDownload className="inline-block" />
+            Resume
           </a>
         </motion.div>
       </div>

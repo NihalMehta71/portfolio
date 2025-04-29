@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaLaptopCode, FaPhoneAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaLaptopCode, FaPhoneAlt, FaFileAlt, FaDownload } from 'react-icons/fa';
 
 export default function About() {
   return (
@@ -31,10 +31,35 @@ export default function About() {
                 interested in cybersecurity and machine learning, with hands-on experience in tools like Metasploit and frameworks 
                 like Stable Diffusion.
               </p>
-              <p className="text-lg text-foreground dark:text-off-white leading-relaxed">
+              <p className="text-lg text-foreground dark:text-off-white leading-relaxed mb-6">
                 As a Student Placement Coordinator at Lovely Professional University, I've developed strong organizational and 
                 interpersonal skills while helping my peers connect with industry opportunities.
               </p>
+              
+              {/* Resume Download Section */}
+              <motion.div 
+                className="bg-gray-100 dark:bg-jet-black/80 p-6 rounded-xl shadow-md hover:shadow-lg border border-jet-black/5 dark:border-luxury-gold/20 flex items-center mt-8"
+                whileHover={{ y: -5, boxShadow: "0 10px 30px -15px rgba(0,0,0,0.2)" }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mr-4 p-3 rounded-full bg-luxury-gold/10 text-luxury-gold">
+                  <FaFileAlt size={24} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1 text-jet-black dark:text-off-white">My Resume</h3>
+                  <p className="text-foreground dark:text-off-white mb-3">
+                    Download my resume to learn more about my education, skills, and experience.
+                  </p>
+                  <a 
+                    href="/assets/Nihal_Mehta_Resume.pdf" 
+                    download
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-luxury-gold hover:bg-luxury-gold/90 text-jet-black rounded-lg transition-colors"
+                  >
+                    <FaDownload size={16} />
+                    Download Resume
+                  </a>
+                </div>
+              </motion.div>
             </div>
             
             <div className="flex-1">
